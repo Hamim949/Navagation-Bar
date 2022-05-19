@@ -58,6 +58,7 @@ ul {
     flex-direction: column;
     height: 0;
     opacity: 0;
+    transition: all 1s ease-in;
   }
   nav ul.open {
     opacity: 1;
@@ -75,9 +76,26 @@ ul {
   #menu-toggle {
     width: 2em;
     height: 2em;
-    background-color: #F55353;
+    background-color: #999999;
     border-radius: 2em;
     transition: all 2s;
+  }
+  #menu-toggle dic {
+    width: 50%;
+    height: 3px;
+    background-color: #000;
+    margin: 4px auto;
+    transform: translateY(13px);
+    transition: all 0.3;
+  }
+  #menu-toggle.open div.one {
+    transition: translateY(1em);
+  }
+  #menu-toggle.open div.two {
+    opacity: 0;
+  }
+  #menu-toggle.open div.three {
+    transition: translateY(-0.5);
   }
   .material-symbols.outlined {
     font-variation-settings: 
@@ -92,7 +110,8 @@ ul {
       }
       #menu-toggle {
         opacity: 0;
-        
+        height: 0;
+        width: 0;
       }
   }
 

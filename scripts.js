@@ -1,3 +1,10 @@
+var mobileBreakpoint = 600;
+
+window.onload = function() {
+    var screenWidth = window.innerWidth;
+    var globalNavbar = document.getelementById("global-nav");
+    var toggle = document.getElementById("menu-toggle");
+}
 if (screenWidth > mobileBreakpoint) {
     globalNavbar.classlist.add("open");
     toggle.classList.add("open");
